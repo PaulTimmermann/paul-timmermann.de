@@ -6,18 +6,26 @@ import '../styles/index_styles/contact.css';
 import '../styles/index_styles/nav.css';
 ---
 
-<html lang="en">
-	<head>
-		<title>Paul Timmermann</title>
-		<meta name="description" content="Paul Timmermann - Hamburg, Bergedorf" />
-		<link rel="icon" type="image/vnd.microsoft.icon" href="/assets/paul-timmermann_white.ico">
-		<link rel="shortcut icon" href="/assets/paul-timmermann_white.ico">
-		<meta charset="utf-8" />
+<!DOCTYPE html>
+<html>
+<head>
 
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	</head>
-	<body>
+<!-- 		SEO - Optimierung 		-->
+	<title>Paul Timmermann</title>
+	<meta name="description" content=
+		"Paul Timmermann - Hamburg, Bergedorf"
+	/>
+
+<!-- 		Links 	 -->
+
+	<link rel="icon" type="image/vnd.microsoft.icon" href="/assets/paul-timmermann_white.ico">
+	<link rel="shortcut icon" href="/assets/paul-timmermann_white.ico">
+	<meta charset="utf-8"/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
 
 	<h1 id="Seo_title_inv">Paul Timmermann - Hamburg, Bergedorf</h1>
 
@@ -28,8 +36,8 @@ import '../styles/index_styles/nav.css';
 		</div>
 
 		<div id="tabs">
-			<a id="tab_2" href="/whatelse">		<span><p>what_else</p></span></a>	<a id="x_2" onclick="closetab(2)">x</a>
-			<a id="tab_1" href="/">	<span><p>index</p></span></a>	<a id="x_1" href="/error/404">x</a>
+			<a id="tab_2" href="/whatelse">		<span><p>what_else.html</p></span></a>	<a id="x_2" onclick="closetab(2)">x</a>
+			<a id="tab_1" href="/">	<span><p>index.html</p></span></a>	<a id="x_1" href="/error/404">x</a>
 		</div>
 		<div class="fold_in" onclick="fold()"></div>
 	</div>
@@ -39,7 +47,8 @@ import '../styles/index_styles/nav.css';
 		<div class="title_spacing_center">
 			<div class="title_spacing">
 				<span id="title_1">Hey, I am Paul<br></span>
-				<span id="title_2">{'{'}<br>
+				<span id="title_2">{'{'}
+									<br>
 									<span id="MediaDesigner">Student</span> 
 									based in <span id="Hamburg">Hamburg</span><br>
 									{'}'}
@@ -100,11 +109,13 @@ import '../styles/index_styles/nav.css';
 		</div>
 	</div>
 
+<!-- 		JavaScript - Implementations		 -->
+
 		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		  	<script is:inline>
 		    AOS.init();
 		</script>
-		<script is:inline src="https://www.google.com/recaptcha/api.js?render=6LezhOAZAAAAAFP-NqWPSvD_XvCOB8QFl3bqYeX9
+			<script is:inline src="https://www.google.com/recaptcha/api.js?render=6LezhOAZAAAAAFP-NqWPSvD_XvCOB8QFl3bqYeX9
 			"></script>
 
 		<script is:inline src="/script.js"></script>

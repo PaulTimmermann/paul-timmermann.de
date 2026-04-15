@@ -1,34 +1,6 @@
-// 			 Contact-form
-window.onload = function() {
-    var $recaptcha = document.querySelector('#g-recaptcha-response');
-
-    if($recaptcha) {
-        $recaptcha.setAttribute("required", "required");
-    }
-};
-
-function onSubmit(token) {
-     document.getElementById("contact-form").submit();
-   };
-
-
-const send = () => {
-var template_params = {
-   "clientName": document.querySelector("#name").value,
-   "clientMail": document.querySelector(".mail").value,
-   "service": document.querySelector(".service").value,
-   "message": document.querySelector("#mssg").value
-}
-
-var service_id = "default_service";
-var template_id = "service_1";
-emailjs.send(service_id, template_id, template_params);
-alert("Email Versendet")
-}
-
-// 		Menu
-const nav_selector = document.querySelector(".nav"); // background black
-const tabs_selector = document.querySelector("#tabs"); // hide
+// Menu
+const nav_selector = document.querySelector(".nav");
+const tabs_selector = document.querySelector("#tabs");
 
 const fold = () => {
 	if (nav_selector.style.backgroundColor === "black") {
@@ -43,7 +15,7 @@ const fold = () => {
 	}
 }
 
-const closetab = (tabNumber) =>{
+const closetab = (tabNumber) => {
 	document.querySelector("#tab_" + tabNumber).style.display = "none";
 	document.querySelector("#x_" + tabNumber).style.display = "none";
 }
