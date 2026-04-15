@@ -16,6 +16,15 @@ const fold = () => {
 }
 
 const closetab = (tabNumber) => {
+	const currentPath = window.location.pathname;
+	const isIndex = currentPath === '/' || currentPath.endsWith('/index.html');
+	
+	if ((tabNumber === 1 && isIndex) || (tabNumber === 2 && !isIndex)) {
+		const targetPage = tabNumber === 1 ? '/whatelse' : '/';
+		window.location.href = targetPage;
+		return;
+	}
+	
 	document.querySelector("#tab_" + tabNumber).style.display = "none";
 	document.querySelector("#x_" + tabNumber).style.display = "none";
 }
