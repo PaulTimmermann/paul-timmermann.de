@@ -1,0 +1,244 @@
+#page3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100vh;
+  width: 100%;
+
+  background-color:rgb(7, 7, 7);
+  
+  font-family: 'Courier';
+  color: white;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+#contact_links_spacing{
+/*	position: absolute;*/
+	height: auto;
+
+	justify-content: center;
+	align-self: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#p3_head{
+	font-size: calc(20px + (40 - 14) * ((100vw - 300px) / (1600 - 300)));
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+.contact_links{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	align-self: start;
+
+	margin-bottom: 4%;
+}
+
+.contact_text{
+	font-size: calc(7px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+	font-style: italic;
+
+	align-self: center;
+	margin-left: calc(10px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.contact_text:hover{
+	text-decoration: underline;
+}
+
+#linked_text{
+	margin-left: calc(9px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.social_imgs{
+	height: calc(11px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+	width: auto;
+}
+
+#social_small{
+	height: calc(11px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+
+#hire{
+	align-self: center;
+	margin-top: 35vh;
+	position: absolute;
+}
+
+		/*Webdesgn - Animation*/
+
+.anim-typewriter{
+	position: relative;
+    top: 50%;  
+    width: auto;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);   
+   	animation: disappear 5s;
+   	animation-fill-mode: forwards;
+  	animation-iteration-count:1;
+    
+    text-decoration: none;
+    font-weight: normal;
+    font-size: calc(10.5px + (23 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: calc(170px + (170 - 14) * ((100vw - 300px) / (1600 - 300)));}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+
+#contact_hire{
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	font-style: italic;
+	text-align: center;
+	font-size: calc(17px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
+	text-shadow: 0px 1px 10px white;
+	animation: disappear 5s;
+	animation-fill-mode: forwards;
+  	animation-iteration-count:1;
+
+	margin-top: calc(5px + (10 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+}
+
+#page3:hover #contact_hire{
+	animation: 	appear_hire 5.7s;
+}
+
+#page3:hover .anim-typewriter{
+	animation: typewriter 3.5s steps(36) 0.75s 1 normal both,
+             blinkTextCursor 500ms steps(36) infinite normal;
+}
+
+#contact_hire:hover{
+text-decoration: underline;
+}
+
+@keyframes appear_hire{
+  0%{opacity: 0}
+  80%{opacity: 0}
+  100%{opacity: 100;}
+}
+
+
+/*			Disappear-Animaton (trash)			*/
+@keyframes disappear {
+	from{opacity: 0}
+	to{opacity: 0}
+}
+
+/*			Contact Form 			*/
+
+#contact-form{
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	font-family: 'Roboto', sans-serif;
+
+	width: 375px;
+}
+
+input[type=text], input[type=email]{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 2vh;
+  border: none;
+  border-bottom: 0.1vh solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+textarea{
+  width: 100%;
+  padding: 0.5vh 0.2vw;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 2vh;
+  border: 0.1vh solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+select{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 2vh;
+  border: none;
+  border-bottom: 0.1vh solid #fff;
+  outline: none;
+  background:rgb(7, 7, 7);
+}
+
+#submit{
+-webkit-transition: 0.4s;
+transition: 0.4s;
+width: 40%;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 2vh;
+  border: 0.1vh solid #fff;
+  outline: none;
+  background: transparent;
+  	animation-name: subcolor;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes subcolor{
+	0%{border-color: #af1b3e}
+	33.3%{border-color: #25a4b1}
+	66.6%{border-color: #92d024}
+	100%{border-color: #af1b3e}
+}
+
+#submit:hover, #submit:focus{
+  	animation-name: subcolor;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+box-shadow: inset 0 0 0 2em white;
+cursor: pointer;
+color: rgb(7, 7, 7);
+}
+
+
+option{
+	background: rgb(7, 7, 7); color: white;
+}
+
+/*.rc-anchor-light{
+  background: #1a1a1a !important;
+  color: #1a1a1a !important;
+}*/
+
+.grecaptcha-badge{
+  visibility: hidden;
+}

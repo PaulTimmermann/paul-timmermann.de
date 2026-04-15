@@ -1,0 +1,79 @@
+---
+---
+
+<html lang="en">
+	<head>
+		<title>Paul Timmermann | whatelse: WebDesign and more!</title>
+		<meta name="description" content="Paul Timmermann | Netthelp - WebDevelopment / MediaDesign - Hamburg, Bergedorf | Hey, ich bin Paul, 16 Jahre alt und besuche grade die Oberstufe eines Gymnasiums in Hamburg." />
+		<link rel="icon" type="image/vnd.microsoft.icon" href="/assets/paul-timmermann_white.ico">
+		<link rel="shortcut icon" href="/assets/paul-timmermann_white.ico">
+		<meta charset="utf-8" />
+
+		<link rel="stylesheet" type="text/css" href="/src/styles/whatelse_styles/style.css">
+		<link rel="stylesheet" type="text/css" href="/src/styles/whatelse_styles/nav.css">
+
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" type="text/css" href="/src/styles/whatelse_styles/icofont.min.css">
+
+	</head>
+	<body>
+	
+	<div class="nav">
+		<div id="arrows">
+			<a id="arw_1" href="/whatelse"></a>
+			<a id="arw_2" href="/"></a>
+		</div>
+
+		<div id="tabs">
+			<a id="tab_1" href="/">	<span><p>home</p></span></a>	<a id="x_1" onclick="closetab(1)">x</a>
+			<a id="tab_2" href="/whatelse">		<span><p>what_else</p></span></a>	<a id="x_2" href="/error/404">x</a>
+		</div>
+		<div class="fold_in" onclick="fold()"></div>
+	</div>
+
+	<section class="project" id="Blog">
+		<a href="https://blog.paul-timmermann.de">
+			<h1>Blog & Newsletter</h1>
+			<h2>
+				This blog merges my interests.<br> 
+				It is about sports, coding/design, photography, tech exploration, privacy, and self-hosting.
+			</h2>
+			<div>
+				<h2>
+					Learn more
+				</h2>
+				<img style="width: 60rem;" src="/assets/images/blog.png" alt="">
+			</div>
+		</a>
+		<div id="learn_more">
+			<span id="moreimg">-></span><a id="more" href="#WebDesign">next</a><span id="moreimg">-></span>
+		</div>
+	</section>
+
+	<section class="project" id="WebDesign">
+		<a href="https://elate-agency.de">
+			<h1>WebDesign Agency</h1>
+			<h2>
+				A blog short is a concise piece of written content typically found on a blog.<br> 
+				Unlike longer blog posts, which can range from hundreds to thousands of words,
+			</h2>
+			<div>
+				<h2>
+					Learn more
+				</h2>
+				<img style="width: 60rem;" src="/assets/images/elate.png" alt="">
+			</div>
+		</a>
+		<div id="learn_more">
+			<span id="moreimg">-></span><a id="more" href="#WebDesign">next</a><span id="moreimg">-></span>
+		</div>
+	</section>
+
+		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		  	<script is:inline>
+		    AOS.init();
+		  	</script>
+	<script is:inline src="/script.js"></script>
+</body>
+</html>
