@@ -2,6 +2,17 @@
 const nav_selector = document.querySelector(".nav");
 const tabs_selector = document.querySelector("#tabs");
 
+const currentPath = window.location.pathname;
+const isIndex = currentPath === '/' || currentPath.endsWith('/index.html') || currentPath === '/index';
+
+if (!isIndex) {
+	document.querySelector("#tab_1").style.display = "none";
+	document.querySelector("#x_1").style.display = "none";
+} else {
+	document.querySelector("#tab_2").style.display = "none";
+	document.querySelector("#x_2").style.display = "none";
+}
+
 const fold = () => {
 	if (nav_selector.style.backgroundColor === "black") {
 	nav_selector.style.backgroundColor = "#0e0e0e";
@@ -16,10 +27,9 @@ const fold = () => {
 }
 
 const closetab = (tabNumber) => {
-	const currentPath = window.location.pathname;
-	const isIndex = currentPath === '/' || currentPath.endsWith('/index.html');
+	const isCurrentPageTab = (tabNumber === 1 && isIndex) || (tabNumber === 2 && !isIndex);
 	
-	if ((tabNumber === 1 && isIndex) || (tabNumber === 2 && !isIndex)) {
+	if (isCurrentPageTab) {
 		const targetPage = tabNumber === 1 ? '/whatelse' : '/';
 		window.location.href = targetPage;
 		return;
